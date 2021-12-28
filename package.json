@@ -12,6 +12,7 @@
     "node": "12 || 14 || 16 || 17"
   },
   "scripts": {
+    "postinstall": "npm run build",
     "build": "lb-tsc",
     "build:watch": "lb-tsc --watch",
     "lint": "npm run eslint && npm run prettier:check",
@@ -32,6 +33,7 @@
     "preopenapi-spec": "npm run build",
     "openapi-spec": "node ./dist/openapi-spec",
     "prestart": "npm run rebuild",
+    "start:prod": "node dist/index.js"
     "start": "node -r source-map-support/register .",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache",
     "rebuild": "npm run clean && npm run build"
