@@ -57,5 +57,12 @@ typings/
 # dotenv environment variables file
 .env
 
-# Cache used by TypeScript's incremental build
+# Generated apidocs
+api-docs/
+
+# Transpiled JavaScript files from Typescript
+dist*/
 *.tsbuildinfo
+
+.DS_Store
+.eslintcache
