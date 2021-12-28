@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {Historico} from './historico.model';
 
 @model()
 export class Exchange extends Entity {
@@ -29,6 +30,9 @@ export class Exchange extends Entity {
     type: 'string',
   })
   coinId?: string;
+
+  @hasMany(() => Historico)
+  historicos: Historico[];
 
   constructor(data?: Partial<Exchange>) {
     super(data);
